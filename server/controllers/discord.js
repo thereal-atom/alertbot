@@ -10,8 +10,8 @@ const presetSchema = require("../models/presetSchema");
 const dotenv = require('dotenv')
 dotenv.config();
 
-const CLIENT_ID = "871038939560050739" //process.env.CLIENT_ID;
-const CLIENT_SECRET = "-b1ahJ1PdYOm_8ZpdhbO9ytMRZ_ofsdx" //process.env.CLIENT_SECRET;
+const CLIENT_ID = process.env.CLIENT_ID;
+const CLIENT_SECRET = process.env.CLIENT_SECRET;
 const homeUrl = "https://alertbot.netlify.app" //process.env.HOME_URL
 const redirect = encodeURIComponent('https://api-alertbot.herokuapp.com/discord/callback');
 
@@ -184,104 +184,3 @@ module.exports = {
     updateBotUsername,
     logoutDiscord,
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const getRoles = async (req, res) => {
-//     const rolesArray = [];
-//     client.guilds.cache.forEach(guild => {
-//         guild.roles.forEach(role => {
-//             rolesArray.push(role)
-//         })
-//     })
-//     res.send(rolesArray)
-//     return;
-//     const guilds = await axios.get(`https://discord.com/api/users/@me/guilds`, {
-//         headers: {
-//             Authorization: "Bot ODcxMDM4OTM5NTYwMDUwNzM5.YQVgOg.Li-JYe9QyytxzQjgGmMCtgn1MyQ "
-//         }
-//     });
-//     let rolesArray = [];
-//     let i = 0;
-//     const fetchInterval = setInterval(async () => {
-//         try{
-//             const { data } = await axios.get(`https://discord.com/api/v9/guilds/${guilds.data[i].id}`, {
-//                 headers: {
-//                     Authorization: "Bot ODcxMDM4OTM5NTYwMDUwNzM5.YQVgOg.Li-JYe9QyytxzQjgGmMCtgn1MyQ"
-//                 }
-//             });
-//             rolesArray.push(data);
-//             if(i === guilds.data.length - 1) clearInterval(fetchInterval);
-//             if(rolesArray.length === guilds.data.length){
-//                 res.status(200).send(rolesArray);
-//             }
-//             console.log(`Roles ${i}`);
-//             if(i === guilds.data.length - 1) {
-//                 clearInterval(fetchInterval)
-//             }else{
-//                 i++;
-//             };
-//         }catch (error){
-            
-//         }
-//     }, 1000/guilds.data.length);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const getChannels = async (req, res) => {
-//     console.log(client);
-//     return;
-//     const guilds = await axios.get(`https://discord.com/api/users/@me/guilds`, {
-//         headers: {
-//             Authorization: "Bot ODcxMDM4OTM5NTYwMDUwNzM5.YQVgOg.Li-JYe9QyytxzQjgGmMCtgn1MyQ "
-//         }
-//     });
-//     let channelsArray = [];
-//     let i = 0;
-//     const fetchInterval = setInterval(async () => {
-//         const { data } = await axios.get(`https://discord.com/api/v9/guilds/${guilds.data[i].id}/channels`, {
-//             headers: {
-//                 Authorization: "Bot ODcxMDM4OTM5NTYwMDUwNzM5.YQVgOg.Li-JYe9QyytxzQjgGmMCtgn1MyQ"
-//             }
-//         });
-//         channelsArray.push(data)
-//         if(channelsArray.length === guilds.data.length){
-//             res.status(200).send(channelsArray);
-//         }
-//         console.log(`Channels ${i}`);
-//         if(i === guilds.data.length - 1) {
-//             clearInterval(fetchInterval)
-//         }else{
-//             i++;
-//         };
-//     }, 1000/guilds.data.length)
-// }
