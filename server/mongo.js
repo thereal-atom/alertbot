@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const mongoPath = `mongodb+srv://netninja:tickerlive@cluster0.vd6ei.mongodb.net/AlertBot?retryWrites=true&w=majority`;
+const mongoPath = `mongodb+srv://`;
 module.exports = async () => {
     await mongoose.connect(mongoPath, {
       retryWrites: true,
