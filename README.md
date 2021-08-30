@@ -11,3 +11,5 @@ Alertbot is a website to make alerting easy and seemless. Add to servers, create
 - [Changelog](https://alert-bot.xyz/changelog)
 - [Terms of Service](https://alert-bot.xyz/terms)
 - [Privacy Policy](https://alert-bot.xyz/privacy)
+
+<img src="https://cdn.discordapp.com/attachments/833379284532985936/881999714306891866/Screenshot_19.png" alt="alertbot" />
