@@ -1,0 +1,194 @@
+.premium-container{
+    color: white;
+    width: 100%;
+    padding-left: 35rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 5rem;
+}
+.premium-container div{
+    width: 100%;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.premium-container div i{
+    padding: 1.5%;
+    border-radius: 10rem;
+    font-size: 3rem;
+    color: white;
+}
+.premium-container .premium-title{
+    font-size: 4rem;
+}
+.premium-container .premium{
+    height: 70vh;
+    background-color: #ff00ff;
+    background-color: #1f2129;
+}
+.premium-container .vip{
+    height: 75vh;
+    margin: 0 3rem;
+    background-color: #ffa600;
+    background-image: linear-gradient(to bottom right, #a200ff, #ffa600);
+    /* background-image: linear-gradient(to bottom right, #ffdc6a, #00ff88); */
+    /* background-color: #1f2129; */
+    /* border: solid 2px #ffa600; */
+}
+.premium-container .yearly{
+    height: 72vh;
+    background-color: #00c3ff;
+    background-color: #1f2129;
+}
+.premium-container .pricing .price{
+    font-size: 6rem;
+}
+.premium-container .divide{
+    color: white;
+    width: 90%;
+}
+.premium-container .premium-features-container{
+    font-size: 120%;
+}
+.premium-container .buy-now{
+    width: 24rem;
+    height: 5rem;
+    border-radius: 2.5rem;
+    border: none;
+    font-size: 2rem;
+    background-image: linear-gradient(to right, #a200ff, #ffa600);
+    /* background-image: linear-gradient(to right, #00fff2, #f700ff); */
+}
+.premium-container .buy-now button{
+    height: 100%;
+}
+.premium-container #first{
+    margin-bottom: 3%;
+}
+.premium-container #middle{
+    margin-bottom: 3%;
+}
+.premium-container #last{
+    margin-bottom: 3%;
+    color: white;
+}
+.premium-container .smol{
+    padding-top: 1.2rem;
+    color: #aaa;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.premium-container .smol span{
+    padding-right: 0.5rem;
+    color: #ff5e5e;
+    text-decoration: line-through;
+}
+.premium-container #middle .smol{
+    color: white;
+}
+#middle-button{
+    background-image: linear-gradient(to right, #3f4344, #444b49);
+    /* border: 2px solid #ffa600; */
+}
+.premium-container .premium-features-container .p{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0.2rem 0;
+    font-size: 1.6rem;
+}
+.premium-container .premium-features-container .p i{
+    font-size: 1.6rem;
+}
+.premium-modal{
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: #000000cc;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    display: none;
+    transition: all 0.3s ease;
+}
+.premium-modal.active{
+    visibility: visible;
+    display: flex;
+}
+.premium-modal-box{
+    width: 60%;
+    height: 30vh;
+    border-radius: 4px;
+    background-color: #1f2129;
+    /* background-image: linear-gradient(to left, #a200ff, #ffa600); */
+    margin-left: 30rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    
+    transition: all 0.2s ease-in-out; 
+    animation: zoom 0.2s ease forwards;
+}
+.premium-modal-box div{
+    margin: 0 5rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.premium-modal-box h1{
+    font-size: 3rem;
+}
+.premium-modal-box p{
+    font-size: 3rem;
+    background-image: linear-gradient(to left, #a200ff, #ffa600);
+    color: #fff;
+    border-radius: 4px;
+    padding: 0.5rem 2rem;
+}
+.premium-modal-box p:hover{
+    cursor: pointer;
+}
+.premium-modal-box .smol{
+    padding-right: 0.6rem;
+    text-decoration: line-through;
+    color: #ff5e5e;
+}
+.premium-modal-box.hide{
+    visibility: hidden;
+    display: none;
+}
+.premium-modal-box.vip{
+    visibility: hidden;
+    display: none;
+}
+.premium-modal-box.vip.active{
+    visibility: visible;
+    display: flex;
+
+}
+
+@keyframes zoom {
+    0%{
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    70%{
+        opacity: 1;
+        transform: scale(1);
+    }
+}

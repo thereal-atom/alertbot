@@ -1,0 +1,14 @@
+.not-found-container{
+    padding-left: 37rem;
+    color: white;
+    padding-top: 4rem;
+}
+.not-found-container h1{
+    font-size: 10rem;
+}
+.not-found-container p{
+    font-size: 4rem;
+}
+.not-found-container a{
+    font-size: 6rem;
+}
